@@ -1,0 +1,114 @@
+# ══════════════════════════════════════════════════════════════
+# Execution Framework — Routing Table
+# ══════════════════════════════════════════════════════════════
+#
+# Machine-readable (scripts/sync-routing.py writes this) AND
+# human-readable (SKILL.md instructs the agent to read this).
+#
+# When adding new task types:
+#   1. Add a new entry under `routing:`
+#   2. The `skills:` list points to the Hermes skill name(s) to load
+#   3. `astrea_skills:` points to astra-skill-* repo names (for sync)
+#
+# When adding new skills to an existing type:
+#   1. Add to the `skills:` and `astra_skills:` lists
+#
+# The sync-routing.py script detects missing skills and suggests
+# appropriate categories based on descriptions.
+#
+# ── Convention ──────────────────────────────────────────────
+#   - skill: Hermes skill name as loaded via skill_view(name)
+#   - astra_skill: Corresponding astra-skill-* repo name
+#   - indicators: semantic hints for agent classification
+
+version: 1
+
+routing:
+
+  # ── Research & Plan ──────────────────────────────────────
+  - type: research-plan
+    label: "Research & plan"
+    indicators:
+      - investigate
+      - analyse
+      - design
+      - choose
+      - compare
+      - evaluate
+      - propose
+      - research
+      - survey
+      - study
+      - plan
+    skills:
+      - name: pre-action-research
+        astra_skill: astra-skill-pre-action-research
+    principles: "§1.1 Research first, propose a solution, await approval"
+
+  # ── Modify System ─────────────────────────────────────────
+  - type: modify-system
+    label: "Modify system"
+    indicators:
+      - change config
+      - restart
+      - upgrade
+      - migrate
+      - refactor
+      - delete
+      - fix
+      - repair
+      - install
+      - uninstall
+      - configure
+      - patch
+    skills:
+      - name: change-safeguard
+        astra_skill: astra-skill-change-safeguard
+    principles: "§2.1 Backup first, baseline record §3.1 Five-point post-scan"
+
+  # ── Deploy Service ────────────────────────────────────────
+  - type: deploy-service
+    label: "Deploy service"
+    indicators:
+      - deploy
+      - install service
+      - start service
+      - register
+      - expose port
+      - go live
+      - publish
+      - launch
+      - enable
+    skills:
+      - name: deploy-register
+        astra_skill: astra-skill-deploy-register
+    principles: "§4.2 Register immediately, attach health checks"
+
+  # ── Wrap Up & Close ───────────────────────────────────────
+  - type: wrap-up
+    label: "Wrap up & close"
+    indicators:
+      - finish
+      - summarise
+      - clean
+      - end
+      - verify
+      - deliver
+      - complete
+      - conclude
+      - close
+    skills:
+      - name: work-closure-check
+        astra_skill: astra-skill-work-closure-check
+    principles: "§4.3 Confirm success first, clean after user confirms"
+
+  # ── Uncertain / Mixed ─────────────────────────────────────
+  - type: uncertain
+    label: "Uncertain / mixed"
+    indicators: []
+    skills: []
+    principles: "Load all matching skills. Combine checklists from each category."
+    note: >
+      Catch-all for tasks that don't clearly fit one category or span
+      multiple categories. The agent should load all skills whose
+      categories overlap with the task description.
