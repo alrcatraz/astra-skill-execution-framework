@@ -1,4 +1,9 @@
 # astra-skill-execution-framework
+<div align="center">
+
+[![License](https://badgen.net/github/license/alrcatraz/astra-skill-execution-framework)](LICENSE) [![GitHub stars](https://badgen.net/github/stars/alrcatraz/astra-skill-execution-framework)](https://github.com/alrcatraz/astra-skill-execution-framework) [![GitHub last commit](https://badgen.net/github/last-commit/alrcatraz/astra-skill-execution-framework)](https://github.com/alrcatraz/astra-skill-execution-framework/commits)
+
+</div>
 
 Task classification and routing for Hermes Agent. A single entry point that
 classifies any task by type and routes to the correct workflow skill —
@@ -107,15 +112,25 @@ Without it, the skill still works (just without the self-evolution feature).
 | [astra-aiagent-infra](https://github.com/alrcatraz/astra-aiagent-infra) | Ecosystem workflow skills | Optional | Combined with pre-action-research, change-safeguard, deploy-register, work-closure-check |
 | [astra-aiagent-infra](https://github.com/alrcatraz/astra-aiagent-infra) | registry.yaml | Optional | Required for sync-routing.py (auto-detect new skills) |
 
+## Related
+
+- [astra-aiagent-infra](https://github.com/alrcatraz/astra-aiagent-infra) — ecosystem portal
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
 
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=alrcatraz/astra-skill-execution-framework&type=date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=alrcatraz/astra-skill-execution-framework&type=date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=alrcatraz/astra-skill-execution-framework&type=date" width="600" />
+  </picture>
+</div>
+
 ---
 
 ## 中文版
-
-## 功能
 
 - **语言无关的任务路由** — 基于语义理解，不依赖关键词列表
 - **单一分类表** — 将任务类型映射到对应的工作原则和子 skill
