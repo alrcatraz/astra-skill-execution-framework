@@ -8,7 +8,8 @@ description: >
   routing table updates.
 category: devops
 version: 2.0.0
-tags: [routing, classification, workflow]
+author: alrcatraz
+tags: [routing, classification, workflow, research, plan, modify, fix, deploy, close, wrap-up, investigate, analyse, navigate]
 ---
 
 # Execution Framework
@@ -71,7 +72,7 @@ Read `routing.yaml` for the definitive source. The table below is a snapshot.
 
 | Task type | Indicators | Load first | Work principles |
 |:----------|:-----------|:-----------|:----------------|
-| **Research & plan** | Investigate, analyse, design, choose, compare, evaluate | `pre-action-research` | §1.1 Research first, propose, await approval |
+| **Research & plan** | Investigate, analyse, design, choose, compare, evaluate, map, look up, navigate | `pre-action-research`, `credential-store-management`, `astra-hub` | §1.1 Research first, propose, await approval |
 | **Modify system** | Change config, restart, upgrade, migrate, refactor, delete, fix, install | `change-safeguard` | §2.1 Backup first, baseline §3.1 Post-scan |
 | **Deploy service** | Deploy, install service, start, register, expose, publish | `deploy-register` | §4.2 Register immediately, health checks |
 | **Wrap up & close** | Finish, summarise, clean, end, verify, deliver | `work-closure-check` | §4.3 Confirm success, clean after user |
