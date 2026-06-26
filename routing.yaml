@@ -43,6 +43,10 @@ routing:
     skills:
       - name: pre-action-research
         astra_skill: astra-skill-pre-action-research
+      - name: credential-store-management
+        astra_skill: astra-skill-credential-store-management
+      - name: astra-hub
+        astra_skill: astra-hub
     principles: "§1.1 Research first, propose a solution, await approval"
 
   # ── Modify System ─────────────────────────────────────────
@@ -64,6 +68,8 @@ routing:
     skills:
       - name: change-safeguard
         astra_skill: astra-skill-change-safeguard
+      - name: astra-vcs-assist
+        astra_skill: astra-vcs-assist
     principles: "§2.1 Backup first, baseline record §3.1 Five-point post-scan"
 
   # ── Deploy Service ────────────────────────────────────────

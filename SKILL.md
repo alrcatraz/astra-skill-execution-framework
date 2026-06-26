@@ -4,8 +4,12 @@ description: >
   Task classification and routing. Use this when starting any task — research,
   plan, modify, deploy, fix, analyse, investigate, close — to identify the
   correct work principles and supporting skills for this type of work.
+  Self-evolving: auto-detects new skills via sync-routing.py and suggests
+  routing table updates.
 category: devops
 version: 2.0.0
+author: alrcatraz
+tags: [routing, classification, workflow, research, plan, modify, fix, deploy, close, wrap-up, investigate, analyse, navigate]
 ---
 
 # Execution Framework
@@ -73,7 +77,7 @@ The check is also available as a lifecycle closure step (see `registry.yaml`
 
 | Task type | Indicators | Load first | Work principles |
 |:----------|:-----------|:-----------|:----------------|
-| **Research & plan** | Investigate, analyse, design, choose, compare, evaluate | `pre-action-research` | §1.1 Research first, propose a solution, await approval |
+| **Research & plan** | Investigate, analyse, design, choose, compare, evaluate, map, look up, navigate | `pre-action-research`, `credential-store-management`, `astra-hub` | §1.1 Research first, propose, await approval |
 | **Modify system** | Change config, restart, upgrade, migrate, refactor, delete, fix, install, uninstall | `change-safeguard` | §2.1 Backup first, baseline record §3.1 Five-point post-scan |
 | **Deploy service** | Deploy, install service, start service, register, expose port, go live, publish | `deploy-register` | §4.2 Register immediately, attach health checks |
 | **Wrap up & close** | Finish, summarise, clean, end, verify, deliver | `work-closure-check` | §4.3 Confirm success first, clean after user confirms |
